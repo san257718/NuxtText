@@ -1,11 +1,13 @@
 <template>
   <div>
-    <div v-for="mountain in mountains.records.location" :key="mountain.title">
-      <div>{{ mountain.locationName }}</div>
-      <div>
-        {{ mountain.weatherElement[0].time[0].parameter.parameterName }}
-      </div>
-    </div>
+    <pc-card />
+
+    <!-- <div v-for="mountain in mountains.records.location" :key="mountain.title">
+        <div>{{ mountain.locationName }}</div>
+        <div>
+          {{ mountain.weatherElement[0].time[0].parameter.parameterName }}
+        </div>
+      </div> -->
   </div>
 </template>
 

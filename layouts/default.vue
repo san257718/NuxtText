@@ -1,9 +1,15 @@
 <template>
-  <div></div>
+  <div>
+    <Nuxt/>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "PCheader",
-};
+    
+}
 </script>
+
+<style>
+
+</style>

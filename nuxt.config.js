@@ -25,6 +25,10 @@ export default {
   plugins: [
   ],
 
+  tailwindcss: {
+    configPath: '~/config/tailwind.js',
+  },
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
