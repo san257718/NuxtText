@@ -4,7 +4,7 @@
       <div class="w-[300px] h-[300px] bg-slate-500 opacity-70">
         <div class="flex justify-center text-lg">
           <h1>天氣</h1>
-          <font-awesome-icon icon="coffee" />
+          <fa-icon icon="sun" />
         </div>
         <div>
           <span>地區</span>

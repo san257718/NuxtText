@@ -16,8 +16,7 @@ export default {
 
   css: ["@/assets/css/main.css"],
 
-  plugins: [
-  ],
+  plugins: [],
 
   tailwindcss: {
     configPath: "~/config/tailwind.js",
@@ -25,7 +24,10 @@ export default {
 
   components: true,
 
-  buildModules: ["@nuxtjs/tailwindcss"],
+  buildModules: [
+    "@nuxtjs/tailwindcss", 
+    "@nuxtjs/fontawesome"
+  ],
 
   modules: ["@nuxtjs/axios"],
 
@@ -36,5 +38,23 @@ export default {
         autoprefixer: {},
       },
     },
+  },
+  fontawesome: {
+    component: 'Fa',
+    suffix: true,
+    icons: {
+      solid: true,
+      regular: true,
+      brands: true,
+    },
+  },
+
+  toast: {
+    position: 'top-center',
+    duration: 2000,
+    keepOnHover: false,
+    fullWidth: false,
+    iconPack: 'fontawesome',
+    closeOnSwipe: true,
   },
 };
