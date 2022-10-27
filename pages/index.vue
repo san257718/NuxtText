@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-screen  object-cover bg-no-repeat opacity-70 bg-index">
+  <div class="">
     <nuxt-child />
   </div>
 </template>
