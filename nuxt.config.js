@@ -16,7 +16,9 @@ export default {
 
   css: ["@/assets/css/main.css"],
 
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/api.js' },
+  ],
 
   tailwindcss: {
     configPath: "~/config/tailwind.js",
