@@ -2,22 +2,26 @@
   <div class="pc-card">
     <div class="w-full min-h-screen flex justify-center items-center">
       <div class="w-[300px] h-[300px] bg-slate-500 opacity-70">
-        <div v-for="link in weather" :key="link.title">
+        <select>
+          <option>選擇地區:</option>
+        </select>
+        <div v-for="link in mountains.records.location" :key="link.title">
           <div class="flex justify-center text-lg">
-            <h1>天氣</h1>
-            <p>{{ link }}</p>
+            <h1>天氣: {{link.weatherElement[0].time[0].parameter.parameterName}}</h1>
+            <!-- <p>{{ link }}</p> -->
             <fa-icon icon="sun" />
           </div>
           <div>
-            <span>地區</span>
+            <span>地區: {{link.locationName}}</span>
           </div>
           <div>
-            <span>時間</span>
+            <span>開始時間: {{link.weatherElement[0].time[0].startTime}}</span>
           </div>
           <div>
-            <span>天氣情況</span>
+            <span>結束時間: {{link.weatherElement[0].time[0].endTime}}</span>
           </div>
         </div>
+        <div>{{returnMountains}}</div>
       </div>
     </div>
   </div>
@@ -26,21 +30,20 @@
 export default {
   name: "PCcard",
 
-  data() {
-    return {
-      weather: []
+  props: {
+    mountains: {
+      type: Object,
+      required: () => {}
     }
   },
 
-  // computed: {
-  //   ...mapState({
-  //     siteweathers: (state) => state.weathers.siteweathers,
-  //   }),
-  // },
-
-  mounted() {
-    const weather = this.$store.dispatch('poin/fetchWeather')
-    return weather
-  },
+  computed: {
+    returnMountains(){
+      if(this.mountains) {
+        console.log(this.mountains);
+      }
+      return ''
+    }
+  }
 };
 </script>
